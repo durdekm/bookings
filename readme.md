@@ -1,11 +1,8 @@
-If you start this app with `go run cmd/web/main.go` then you get the following error:
+# Bookings and Reservations
 
-durdekm@mbp2014 38-using-pat-for-routing % go run cmd/web/main.go
-# command-line-arguments
-cmd/web/main.go:46:12: undefined: routes
-durdekm@mbp2014 38-using-pat-for-routing %
+This is the repository for my bookings and reservations project.
 
-Start the app with `go run cmd/web/*.go` and it should work
-
-durdekm@mbp2014 38-using-pat-for-routing % go run cmd/web/*.go
-Starting application on port 127.0.0.1:8080
+- Built in Go version 1.19
+- Uses the [chi router](https://github.com/go-chi/chi/v5)
+- Uses [alex edwards SCS](https://github.com/alexedwards/scs/v2) session management
+- Uses [nosurf](https://github.com/justinas/nosurf)
