@@ -134,8 +134,12 @@
 	<!-- https://sweetalert2.github.io/ -->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+	<!-- JavaScript modules, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules -->
+
 	<script>
-		console.log("I am printing from javascript...");
+		//console.log("I am printing from javascript...");
+
+		let attention = Prompt();
 
 		// Example starter JavaScript for disabling form submissions if there are invalid fields
 		(function() {
@@ -158,7 +162,8 @@
 
 		document.getElementById("colorButton").addEventListener("click", function() {
 			//notify("This is my message", "warning")
-			notifyModal("title", "<em>Hello, World</em>", "success", "My Text for the button")
+			//notifyModal("title", "<em>Hello, World</em>", "success", "My Text for the button")
+			attention.success();
 		})
 
 		const elem = document.getElementById('reservation-dates');
@@ -180,6 +185,21 @@
 				icon: icon,
 				confirmButtonText: confirmButtonText
 			})
+		}
+
+		function Prompt() {
+			let toast = function() {
+				console.log("clicked button and got toast")
+			}
+
+			let success = function() {
+				console.log("clicked button and got success")
+			}
+
+			return {
+				toast: toast,
+				success: success,
+			}
 		}
 	</script>
 </body>
